@@ -1,4 +1,5 @@
 #include <ps5Controller.h>
+#include "../secrets.h"
 
 // GPIO設定
 // モーター用
@@ -28,7 +29,7 @@ void setup() {
   pinMode(OutPutPWM_pin14, OUTPUT);
 
   Serial.begin(921600);
-  ps5.begin("10:18:49:57:08:F4"); //replace with MAC address of your controller
+  ps5.begin(MAC_ADDRESS); //replace with MAC address of your controller
   Serial.println("Ready.");
 }
  
